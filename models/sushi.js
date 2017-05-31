@@ -16,9 +16,12 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false
 		},
 		date: {
-			type: DataTypes.DATA,
+			type: DataTypes.DATE,
 			defaultValue: new Date(),
 			allowNull: false
 		}
+	}, {
+		freezeTableName: true
 	});
+	return Sushi;
 };
