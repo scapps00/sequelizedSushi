@@ -16,6 +16,17 @@ module.exports = function(app) {
 		});
 	});
 
-
+	app.put("/api/sushi/:id", function(req, res) {
+		devour = {
+			devoured: true
+		};
+		db.Sushi.update(devour, {
+			where: {
+				id: req.params.id
+			}
+		}).then(function(data) {
+			res.redirect("/");
+		});
+	});
 }
 
