@@ -21,7 +21,8 @@ module.exports = function(sequelize, DataTypes) {
 			allowNull: false
 		}
 	}, {
-		freezeTableName: true
+		freezeTableName: true,
+		timestamps: false
 	});
 	return Sushi;
 };
